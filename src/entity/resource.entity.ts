@@ -4,7 +4,7 @@ import { Project } from './project.entity';
 @Entity()
 export class Resource {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
   resourceName: string;

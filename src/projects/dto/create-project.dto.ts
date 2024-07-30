@@ -1,3 +1,4 @@
+import { Risk } from "src/entity/risks.entity";
 
 export class CreateProjectDto {
   projectNumber: string;
@@ -10,12 +11,11 @@ export class CreateProjectDto {
   actualBudget: number;
   currency: string;
   typeOfProject: string;
-  client: string;
   projectManager: string;
   status: string;
   priority: string;
-  risks: string[];
-  resources: {
+  risks: Risk[];
+    resources: {
     resourceName: string;
     resourceType: string;
     allocatedHours: number;

@@ -5,9 +5,9 @@ import { Task } from './task.entity';
 
 @Entity()
 export class Milestone {
-  @PrimaryGeneratedColumn()
-  id: number;
-
+  @PrimaryGeneratedColumn('uuid')
+  id: string
+  
   @Column()
   milestoneName: string;
 
