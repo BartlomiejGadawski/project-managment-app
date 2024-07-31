@@ -3,7 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProjectsModule } from './projects/projects.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { CreateProjectService } from './projects/create-project/create-project.service';
+import { UsersModule } from './users/users.module';
+import { UsersController } from './users/users.controller';
 
 
 @Module({
@@ -15,7 +16,7 @@ import { CreateProjectService } from './projects/create-project/create-project.s
       entities: ['dist/**/**.entity{.ts,.js}'],
       logging: true,
       synchronize: true,
-    }),ProjectsModule,
+    }),ProjectsModule, UsersModule,
   ],
   controllers: [AppController],
   providers: [AppService,ProjectsModule ],
