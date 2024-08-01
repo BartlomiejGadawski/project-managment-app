@@ -5,6 +5,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { UsersController } from './users/users.controller';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -16,7 +17,10 @@ import { UsersController } from './users/users.controller';
       entities: ['dist/**/**.entity{.ts,.js}'],
       logging: true,
       synchronize: true,
-    }),ProjectsModule, UsersModule,
+    }),ProjectsModule,
+     UsersModule,
+     AuthModule,
+
   ],
   controllers: [AppController],
   providers: [AppService,ProjectsModule ],
